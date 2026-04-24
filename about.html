@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/menu.js"></script>
 </head>
 <body>
     <header>
@@ -12,12 +13,13 @@
         <h1>Portifólio</h1>
 
         </div>
-        <nav>
-         <button type="button"><a href="http://index.html"></a> Home</button>  
-         <button type="button"><a href="http://about.html"></a> Sobre</button>
-         <button type="button"><a href="http://portifolio.html"></a> Portifólio</button>
-         <button type="button"><a href="http://servicos.html"></a> Serviços</button>
-         <button type="button"><a href="http://contato.html"></a> Contato</button> 
+        <nav id="pagina">
+         <button id="1" type="button" onclick="home()"> Home</button>  
+         <button id="2" type="button"onclick="about()">  Sobre</button>
+         <button id="3" type="button" onclick="portifolio()"> Portifólio</button>
+         <button id="4" type="button" onclick="services()"> Serviços</button>
+         <button id="5" type="button" onclick="contato()"> Contato</button> 
+         
         </nav>
     </header>
 
