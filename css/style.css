@@ -151,3 +151,9 @@ img:hover{
     background-color: rgb(128, 3, 245);
     border-radius: 50%;
 }
+/* Flexbox pagina services*/
+.container{
+display: flex;
+justify-content: center;
+justify-items: center;
+}
