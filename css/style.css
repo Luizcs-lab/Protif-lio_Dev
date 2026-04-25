@@ -152,8 +152,63 @@ img:hover{
     border-radius: 50%;
 }
 /* Flexbox pagina services*/
-.container{
-display: flex;
-justify-content: center;
-justify-items: center;
+/* Configuração da Seção que envolve tudo */
+.secao-servicos {
+    width: 100%;
+    /* O min-height permite que a caixa cresça se tiver muito texto */
+    min-height: 400px; 
+    background-color: rgba(0, 0, 0, 0.76);
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Centraliza o container no meio da tela */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 40px 0;
+}
+
+/* O Flexbox atuando nos itens */
+.container {
+    display: flex;
+    flex-direction: row; /* Coloca um do lado do outro */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Dá um respiro e cria espaço entre as 3 caixas! */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* O visual de cada um dos 3 serviços */
+.item {
+    width: 30%; /* Cada box ocupa quase 1/3 do espaço */
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid blueviolet;
+    
+    /* Flexbox dentro do item para centralizar o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(146, 0, 204, 0.4); /* Uma sombrinha legal */
+    transition: transform 0.3s ease; /* Prepara para um efeito hover */
+}
+
+/* Efeito bacana quando passa o mouse por cima do serviço */
+.item:hover {
+    transform: translateY(-10px); /* Faz a caixa "pular" um pouquinho pra cima */
+    border-color: rgb(222, 106, 245);
+}
+
+/* Textos dentro do item */
+.item h3 {
+    color: rgb(218, 182, 252);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.item p {
+    color: white;
+    font-size: 16px;
 }

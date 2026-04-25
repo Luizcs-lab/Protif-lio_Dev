@@ -1,8 +1,8 @@
 function home(){
-    window.location.href = "/index.html"
+    window.location.href = "../index.html"
 }
 function about(){
-    window.location.href = "/about.html"
+    window.location.href = "../about.html"
 }
 function portifolio(){
     window.location.href = "/portifolio.html"
