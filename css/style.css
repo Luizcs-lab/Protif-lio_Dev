@@ -36,20 +36,28 @@ nav{
     padding-top: 10px;
 }
 
-button{
-    /*estilização de botões do menu*/
+
+.btn-menu {
+    /*estilização dos links para parecerem botões*/
     width: 200px;
     height: 40px;
-    background: linear-gradient(90deg,blueviolet, rgb(179, 110, 245));
+    background: linear-gradient(90deg, blueviolet, rgb(179, 110, 245));
     color: white;
-    border-radius: 5%;
+    border-radius: 5px; /* Mudei para px para um arredondamento mais suave */
+    text-decoration: none; /* Tira aquele sublinhado feio padrão de links */
+    
+    /* Centraliza o texto dentro do link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-button:hover{
-    background: linear-gradient(90deg,rgb(218, 182, 252), blueviolet);
-    transition: 2s;
-    transition-delay: 1s;
+.btn-menu:hover {
+    background: linear-gradient(90deg, rgb(218, 182, 252), blueviolet);
+    transition: 0.5s; /* Reduzi o tempo para a cor mudar mais rápido ao passar o mouse */
 }
+
 /*----fim do cabeçalho da página----*/
 
 /*conteúdo principal da página contendo imagem do desenvolvedor e sobre quem é */
