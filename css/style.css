@@ -2,7 +2,7 @@ body{
     /*definição da estilização do corpo da página seu background*/
     margin: 0;
     padding: 0%;
-    background-image: url("/img/professional-programmer-working-late-dark-office.jpg")  ;
+    background-image: url("../img/professional-programmer-working-late-dark-office.jpg");
     background-repeat: repeat-y;
     background-size: 100%;
 }
@@ -36,20 +36,28 @@ nav{
     padding-top: 10px;
 }
 
-button{
-    /*estilização de botões do menu*/
+
+.btn-menu {
+    /*estilização dos links para parecerem botões*/
     width: 200px;
     height: 40px;
-    background: linear-gradient(90deg,blueviolet, rgb(179, 110, 245));
+    background: linear-gradient(90deg, blueviolet, rgb(179, 110, 245));
     color: white;
-    border-radius: 5%;
+    border-radius: 5px; /* Mudei para px para um arredondamento mais suave */
+    text-decoration: none; /* Tira aquele sublinhado feio padrão de links */
+    
+    /* Centraliza o texto dentro do link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-button:hover{
-    background: linear-gradient(90deg,rgb(218, 182, 252), blueviolet);
-    transition: 2s;
-    transition-delay: 1s;
+.btn-menu:hover {
+    background: linear-gradient(90deg, rgb(218, 182, 252), blueviolet);
+    transition: 0.5s; /* Reduzi o tempo para a cor mudar mais rápido ao passar o mouse */
 }
+
 /*----fim do cabeçalho da página----*/
 
 /*conteúdo principal da página contendo imagem do desenvolvedor e sobre quem é */
@@ -95,10 +103,10 @@ section{
     display: flex;
     justify-content: center;
 }
-
+/*barra enorme
 div{
-    width: 600px;
-    height: 350px;
+    width: 700px;
+    height: 200px;
     border-radius: 5%;
     background-color: black;
     display: flex;
@@ -109,7 +117,7 @@ div{
     border-left: 4px solid blueviolet;
     border-top: 4px solid blueviolet;
     margin-top: 2%;
-}
+}*/
 h2{
     font-size: 42px;
     background-image: linear-gradient(rgb(137, 30, 236),rgb(222, 106, 245));
@@ -121,9 +129,9 @@ h2{
 
 
 footer{
-    /*rodapé da página*/
+    /*rodapé da página em com icones*/
     width: 100%;
-    height: 100px;
+    height: 10px;
     background-color: rgb(0, 0, 0);
     margin-top: 7%;
     display: flex;
@@ -150,4 +158,191 @@ img:hover{
     transition: 2s;
     background-color: rgb(128, 3, 245);
     border-radius: 50%;
+}
+/* Flexbox pagina services*/
+/* Configuração da Seção que envolve tudo */
+.secao-servicos {
+    width: 100%;
+    /* O min-height permite que a caixa cresça se tiver muito texto */
+    min-height: 400px; 
+    background-color: rgba(0, 0, 0, 0.76);
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Centraliza o container no meio da tela */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 40px 0;
+}
+
+/* O Flexbox atuando nos itens */
+.container {
+    display: flex;
+    flex-direction: row; /* Coloca um do lado do outro */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Dá um respiro e cria espaço entre as 3 caixas! */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* O visual de cada um dos 3 serviços */
+.item {
+    width: 30%; /* Cada box ocupa quase 1/3 do espaço */
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid blueviolet;
+    
+    /* Flexbox dentro do item para centralizar o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(146, 0, 204, 0.4); /* Uma sombrinha legal */
+    transition: transform 0.3s ease; /* Prepara para um efeito hover */
+}
+
+/* Efeito bacana quando passa o mouse por cima do serviço */
+.item:hover {
+    transform: translateY(-10px); /* Faz a caixa "pular" um pouquinho pra cima */
+    border-color: rgb(222, 106, 245);
+}
+
+/* Textos dentro do item */
+.item h3 {
+    color: rgb(218, 182, 252);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.item p {
+    color: white;
+    font-size: 16px;
+}
+
+/* ============================================================
+   CONTATO: VERSÃO CLEAN (SEM CABEÇALHO)
+   ============================================================ */
+
+/* Reset de segurança para organizar as linhas sem criar caixas pretas */
+.contato-row, .contato-redes, .container-contato, .contato-btn-box {
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    margin: 0;
+    padding: 0;
+}
+
+.main-contato {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 85vh;        /* Ocupa a tela quase toda */
+    padding: 20px;
+}
+
+/* CAIXA DO FORMULÁRIO */
+.contato {
+    width: 800px !important;
+    height: 200px;
+    max-width: 95%;
+    background-color: #0f0f0f !important;
+    border: none !important;
+    padding: 69px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.contato-titulo {
+    font-size: 45px !important;
+    color: white !important;
+    margin-bottom: 35px !important;
+    background: none !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.contato-titulo span {
+    color: #a020f0 !important;
+    -webkit-text-fill-color: #a020f0 !important;
+}
+
+/* INPUTS LADO A LADO */
+.contato-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-row {
+    gap: 20px !important;
+    flex-direction: row !important;
+}
+
+.contato input, .contato textarea {
+    width: 100%;
+    padding: 18px;
+    background-color: #1f2229 !important;
+    border: none !important;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.contato textarea {
+    height: 150px;
+    resize: none;
+    max-width: 96%;
+}
+
+/* BOTÃO COM BRILHO */
+.contato-btn-box {
+    justify-content: center !important;
+}
+
+.contato-btn {
+    background: #a020f0 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 15px 55px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6) !important;
+    transition: 0.3s ease;
+}
+
+.contato-btn:hover {
+    box-shadow: 0 0 40px #a020f0 !important;
+    transform: scale(1.05);
+}
+
+/* RODAPÉ LIMPO */
+.contato-redes {
+    display: flex !important;           /* Garante que fiquem lado a lado */
+    flex-direction: row !important;     /* Força a linha */
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 50px 0 !important;
+    width: 100% !important;
+    height: auto !important;            /* Mata a altura de 350px do grupo */
+    background-color: #7224ef(0, 0, 0) !important;
+    border: none !important;            /* Mata a borda roxa do grupo */
+    box-shadow: none !important;        /* Mata a sombra roxa do grupo */
+}
+
+
+footer {
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-top: 1px solid #7224ef;
 }
