@@ -1,21 +1,74 @@
+/*configuração para se ajustar em telas de celular*/
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .btn-menu {
+        width: 45%; /* Dois botões por linha no celular */
+        font-size: 12px;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column; /* Serviços um embaixo do outro */
+    }
+
+    .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contato {
+        padding: 20px !important;
+        height: auto; /* Deixa o formulário respirar */
+    }
+
+    .contato-row {
+        flex-direction: column !important; /* Inputs um embaixo do outro */
+    }
+}
+/*fim dos ajustes de tela de celular*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     /*definição da estilização do corpo da página seu background*/
     margin: 0;
-    padding: 0%;
+    padding: 0;
     background-image: url("../img/professional-programmer-working-late-dark-office.jpg");
-    background-repeat: repeat-y;
-    background-size: 100%;
+    background-attachment: fixed; /* Fixa o fundo para um efeito parallax */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: sans-serif;
 }
 /*----Inicio do cabeçalho da página----*/
 header{
     /*cabeçalho da página*/
     width: 100%;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.76);
-    
+    min-height: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que o menu desça em telas pequenas */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .titulo{
     border-bottom: none;
@@ -23,34 +76,33 @@ header{
     border-left: none;
     width: 50px;
     height: 50%;
-    margin-right: 30%;
+    margin-right: 20%;
 
 }
 nav{
     /*menu de navegação*/
-    width: 50%;
-    display: flex;
-    flex-direction: row;
+   display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding-top: 10px;
 }
-
-
 .btn-menu {
     /*estilização dos links para parecerem botões*/
-    width: 200px;
-    height: 40px;
+   padding: 8px 20px;
+    width: auto; /* Deixa o botão crescer conforme o texto */
+    min-width: 100px;
     background: linear-gradient(90deg, blueviolet, rgb(179, 110, 245));
     color: white;
-    border-radius: 5px; /* Mudei para px para um arredondamento mais suave */
-    text-decoration: none; /* Tira aquele sublinhado feio padrão de links */
-    
-    /* Centraliza o texto dentro do link */
+    border-radius: 5px;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    /* Centraliza o texto dentro do link */
+   
 }
 
 .btn-menu:hover {
@@ -63,28 +115,48 @@ nav{
 /*conteúdo principal da página contendo imagem do desenvolvedor e sobre quem é */
 main{
     width: 100%;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.76);
-    margin-top: 5%;
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row; /* Lado a lado no PC */
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 5%;
+    flex-wrap: wrap; /* Quebra linha no celular */
+    box-shadow: 0px 10px 0px rgba(146, 0, 204, 0.6);  
+}
+.capa{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    justify-items: center;
-    box-shadow: 0px 10px 0px  rgba(146, 0, 204, 0.678);
-    
+    gap: -10px;
 }
 h1{
     margin: 0;
-    font-size: 32px;
+    font-size: 52px;
     color: blueviolet;
 
 }
 h2{
-    color: white;
+    font-size: 42px;
+    background-image: linear-gradient(rgb(137, 30, 236),rgb(222, 106, 245));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+h3{
+    font-size: 22px;
+    background-image: linear-gradient(rgb(137, 30, 236),rgb(222, 106, 245));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
 }
 p{
     color: white;
     font-size: large;
+    font-size: 25px;
 }
 div{
     display: flex;
@@ -99,39 +171,15 @@ section{
     width: 100%;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.76);
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-}
-/*barra enorme
-div{
-    width: 700px;
-    height: 200px;
-    border-radius: 5%;
-    background-color: black;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-bottom: 4px solid blueviolet;
-    border-left: 4px solid blueviolet;
-    border-top: 4px solid blueviolet;
-    margin-top: 2%;
-}*/
-h2{
-    font-size: 42px;
-    background-image: linear-gradient(rgb(137, 30, 236),rgb(222, 106, 245));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black;
 }
-
-
 footer{
     /*rodapé da página em com icones*/
     width: 100%;
-    height: 10px;
+    height: 50px;
     background-color: rgb(0, 0, 0);
     margin-top: 7%;
     display: flex;
@@ -144,33 +192,107 @@ footer{
     display: flex;
     flex-direction: row;
     width: 400px;
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.76);
-    gap: 20px;
+    height: 100px;
+    background-color: white;
+    gap: 80px;
     border-bottom: none;
     border-top: none;
     border-left: none;
     border-radius: 2%;
+    border-bottom: 8px solid rgb(137, 43, 226);
     
 }
-img:hover{
-    width: 80px;
-    transition: 2s;
-    background-color: rgb(128, 3, 245);
-    border-radius: 50%;
+
+.fotoperfil{
+   max-width: 100%; /* Nunca vaza da tela */
+    width: 400px;    /* Tamanho no PC */
+    height: auto;
+    border-radius: 10%;
+    border: 5px solid #a020f0;
+    margin: 20px 0;
 }
+.secao-sobre{
+    width: 100%;
+    /* O min-height permite que a caixa cresça se tiver muito texto */
+    min-height: 400px; 
+    background-color: rgba(0, 0, 0, 0.76);
+    margin-top: 10%;
+    display: flex;
+    justify-content: center; /* Centraliza o container no meio da tela */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 40px 0;
+}
+
 /* Flexbox pagina services*/
 /* Configuração da Seção que envolve tudo */
 .secao-servicos {
     width: 100%;
     /* O min-height permite que a caixa cresça se tiver muito texto */
-    min-height: 400px; 
+    min-height: 500px; 
     background-color: rgba(0, 0, 0, 0.76);
-    margin-top: 5%;
+    margin-top: 10%;
     display: flex;
     justify-content: center; /* Centraliza o container no meio da tela */
     align-items: center; /* Centraliza verticalmente */
     padding: 40px 0;
+}
+
+.secao-portifolio{
+    width: 100%;
+     min-height: 650px; 
+    background-color: rgba(0, 0, 0, 0.76);
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trabalhos-portifolio{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 5%;   
+
+}
+.trabalhos-portifolio img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Mantém a proporção sem achatar a imagem */
+    border: 4px solid blueviolet;
+    transition: 0.3s;
+}
+
+.trabalhos-portifolio img:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+.barra{
+    width: 500px;
+    background-color: blueviolet;
+    height: 5px;
+}
+tr{
+    background-color: #1f2229;
+    width: 90%;
+    
+}
+td{
+    
+    width: 400px;
+    border: 5px solid blueviolet;
+    background-color: black;
+    border-bottom: 5px dotted blueviolet;
+    
+}
+td:hover{
+    width: 410px;
+    transition: 1s;
+}
+tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 /* O Flexbox atuando nos itens */
@@ -238,6 +360,7 @@ img:hover{
 }
 
 .main-contato {
+    margin-top: 10%;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
@@ -257,6 +380,7 @@ img:hover{
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    margin-top: 10%;
 }
 
 .contato-titulo {
@@ -265,6 +389,7 @@ img:hover{
     margin-bottom: 35px !important;
     background: none !important;
     -webkit-text-fill-color: white !important;
+    
 }
 
 .contato-titulo span {
@@ -340,9 +465,3 @@ img:hover{
 }
 
 
-footer {
-    width: 100%;
-    padding: 30px;
-    background-color: #ffffff;
-    border-top: 1px solid #7224ef;
-}
