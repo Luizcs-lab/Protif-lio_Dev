@@ -1,50 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/menu.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <!--navegação da página-->
     <header>
-        <div class="titulo">
+      <div class="titulo">
         <h1>Portifólio</h1>
+      </div>
+      <nav>
+        <a class="btn-menu" href="#inicio">Home</a>
+        <a class="btn-menu" href="#sobre">Sobre</a>
+        <a class="btn-menu" href="#portifolio">Portifólio</a>
+        <a class="btn-menu" href="#serviços">Serviços</a>
+        <a class="btn-menu" href="#contato">Contato</a>
+      </nav>
+    </header>
+    <!--fim navegação da página-->
+
+    <!--conteúdo de apresentação do desenvolvedor-->
+    <main id="inicio">
+      <div class="capa">
+      <h1>Hello world!</h1>
+      <h2>Sou Henrique</h2>
+      <h3>Desenvolvedor de Sistemas</h3>
+      <div class="redes">
+        <img src="icons/github.png" alt="" srcset="" width="60px" />
+        <img src="icons/instagram (1).png" alt="" srcset="" width="60px" />
+        <img src="icons/whatsapp.png" alt="" srcset="" width="60px" />
+      </div>
+
+      </div>
+
+        <div>
+        <img class="fotoperfil" src="img/Gemini_Generated_Image_3jnygn3jnygn3jny.png" width="500px"/>
 
         </div>
-        <nav>
-            <a class="btn-menu" href="index.html">Home</a>  
-            <a class="btn-menu" href="about.html">Sobre</a>
-            <a class="btn-menu" href="portifolio.html">Portifólio</a>
-            <a class="btn-menu" href="services.html">Serviços</a>
-            <a class="btn-menu" href="contato.html">Contato</a> 
-        </nav>
-        
-    </header>
-
-
-    <main>
-        <h1>Fulano</h1>
-        <h2>UI/UX</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-             Eligendi beatae dolor voluptatem obcaecati repellendus reiciendis maxime molestias dolores quam quia.
-              Laudantium reiciendis adipisci quos, ut voluptate ex ratione quod itaque?</p>
-              
-        <div>
-            <img src="img/persona.png" alt="" srcset="" width="300px" >
-        </div>      
-
+      
     </main>
+    <!--fim conteúdo de apresentação do desenvolvedor-->
 
-    <section>
+    <!--seção sobre o desenvolvedor caracteristicas e a experiência dele-->
+    <section id="sobre" class="secao-sobre">
+        <h2>Sobre mim</h2>
+      <div>
+        <p>
+          Estou feliz em poder demonstrar minha trajetória, eu entrego
+          soluções que vão desde a infraestrutura até a interface final. Trago 
+          uma bagagem técnica robusta e diversificada:
+          Especialista em Dados e Back-end: Possuo experiência prática com
+          bancos de dados como PostgreSQL, MySQL e SQL Server, além de dominar
+          linguagens como Python, PHP e Java (Spring Boot) e também linguagem de 
+          marcação de texto HTML, CSS e Javascript para desenvolvimento Web. Soluções
+          Corporativas: Já desenvolveu sistemas de gerenciamento de estoques
+          (ERP) e aplicações hospitalares complexas, focando sempre na
+          eficiência operacional. Infraestrutura: Tem total domínio na
+          configuração e manutenção de servidores Linux e manutenção de
+          hardware. Seja criando landing pages de alta
+          conversão ou estruturando bancos de dados complexos, sou um
+          profissional que une a precisão técnica com uma visão empreendedora,
+          sempre pronto para transformar desafios em código funcional e
+          eficiente.
+        </p>
+      </div>
+    </section>
+    <!--fim seção sobre o desenvolvedor-->
 
+    <!--seção de portifolio do desenvolvedor comprovando trabalhos anteriores realizados-->
+    <section id="portifolio" class="secao-portifolio">
+      <h1>Portifolio</h1>
+      <div class="trabalhos-portifolio">
+        <table>
+        <tbody>
+          <tr>
+            <td>
+              <img src="img/backend java.jpg" width="400px" />
+            </td>
+            <td>
+              <img src="img/controle estoque python.jpg" width="400px"/>
+            </td>
+            <td>
+            <img src="img/servidorlinux.png" width="400px" />
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+            <img src="img/landing page.jpg" width="400px"/>
+            </td>
+            <td>
+            <img src="img/postgresql.png" width="400px"/>
+            </td>
+            <td>
+            <img src="" alt="" srcset="" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      
+    </section>
+    <!--fim seção de protifolio-->
+
+<!--Inicio da seção de serviços-->
+    <section id="serviços" class="secao-servicos">
+        <h2>Serviços</h2>
+      <div class="container">
+        <div class="item">
+          <h3>Desenvolvimento Python</h3>
+          <p>
+            Criação de APIs robustas e automação de processos para otimizar o
+            seu negócio.
+          </p>
+        </div>
+
+        <div class="item">
+          <h3>Bancos de Dados</h3>
+          <p>
+            Modelagem e administração de dados com foco em performance e
+            segurança.
+          </p>
+        </div>
+
+        <div class="item">
+          <h3>Servidores Linux</h3>
+          <p>
+            Configuração, manutenção e monitoramento de infraestrutura para alta
+            disponibilidade.
+          </p>
+        </div>
+      </div>
     </section>
 
+    <main id="contato" class="main-contato">
+      <section class="container-contato">
+        <div class="contato">
+          <h2 class="contato-titulo">Contact <span>Me!</span></h2>
+
+          <form action="#" class="contato-form">
+            <div class="contato-row">
+              <input type="text" placeholder="Full Name" />
+              <input type="email" placeholder="Email Address" />
+            </div>
+
+            <div class="contato-row">
+              <input type="tel" placeholder="Mobile Number" />
+              <input type="text" placeholder="Email Subject" />
+            </div>
+
+            <textarea placeholder="Your Message" rows="8"></textarea>
+
+            <div class="contato-btn-box">
+              <button type="submit" class="contato-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <footer>
-
+      
     </footer>
-    
-</body>
+  </body>
 </html>
